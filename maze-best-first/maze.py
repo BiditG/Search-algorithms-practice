@@ -118,12 +118,5 @@ def find_path(maze, start, target):
                 child = Node(state=state, parent=node, action=None)
                 frontier.add(child)
         
-        
-        
-         
-        
-        
-
-
 if __name__ == "__main__":
     main()
