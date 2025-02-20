@@ -122,7 +122,6 @@ def find_path(maze, start, target):
         
          
         
-        
 
 
 if __name__ == "__main__":
