@@ -6,9 +6,8 @@ connections = {}
 
 for user, friend in zip(df["user"], df["friend"]):
     connections.setdefault(user, []).append(friend)
-    connections.setdefault(friend, []).append(user)  # Ensure bidirectional connection
+    connections.setdefault(friend, []).append(user)  
 
-# Stack Frontier Class (LIFO)
 class StackFrontier:
     def __init__(self):
         self.stack = []
@@ -19,7 +18,7 @@ class StackFrontier:
     def remove(self):
         if self.empty():
             raise Exception("No path found")
-        return self.stack.pop()  # LIFO: Last In, First Out
+        return self.stack.pop()  
 
     def empty(self):
         return len(self.stack) == 0
@@ -56,7 +55,7 @@ def find_connection(person1, person2):
             while node:
                 path.append(node.state)
                 node = node.parent
-            return path[::-1]  # Reverse path to get correct order
+            return path[::-1]  
 
         explored.add(node.state)
 
@@ -65,7 +64,6 @@ def find_connection(person1, person2):
                 child_node = Node(state=neighbor, parent=node)
                 frontier.add(child_node)
 
-    return None  # No connection found
 
 # Example usage
 person1, person2 = "user_2", "user_10"
