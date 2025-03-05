@@ -28,7 +28,7 @@ class StackFrontier: # For dfs
             self.frontier = self.frontier[:-1]
             return node
 
-class QueueFrontier(StackFrontier): # inherits all other things from stack an
+class QueueFrontier(StackFrontier):
     def remove(self):
         if self.empty():
             raise Exception("Empty Frontier")
