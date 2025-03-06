@@ -33,7 +33,7 @@ class QueueFrontier(StackFrontier):
         if self.empty():
             raise Exception("Empty Frontier")
         else:
-            node = self.frontier[0] # last in first out
+            node = self.frontier[0] 
             self.frontier = self.frontier[1:]
             return node
         
