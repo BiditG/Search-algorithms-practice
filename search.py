@@ -7,7 +7,7 @@ class Node:
         self.action = action
         self.cost = cost
   
-class StackFrontier: # For dfs
+class StackFrontier: 
     def __init__(self):
         self.frontier = []
         
