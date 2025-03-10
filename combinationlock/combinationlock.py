@@ -5,7 +5,7 @@ def main():
     initial_state = [0, 0, 0, 0]
     target = [0, 5, 6, 2]
     
-    # print(get_neighbors(initial_state))
+
     
     path = find_path(initial_state, target)
     for state, action in path:
